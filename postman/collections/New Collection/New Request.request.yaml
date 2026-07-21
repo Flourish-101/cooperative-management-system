@@ -1,5 +1,31 @@
 $kind: http-request
 name: New Request
-url: ""
-method: GET
+url: http://localhost:3000/auth/login
+method: POST
+headers:
+  Authorization: |
+    rror:Invalid character in header content ["Authorization"]
+body:
+  type: json
+  content: "\r
+
+    {\r
+
+    \  \"firstName\": \"John\",\r
+
+    \  \"lastName\": \"Doe\",\r
+
+    \  \"email\": \"john@example.com\",\r
+
+    \  \"password\": \"Password123!\",\r
+
+    \  \"phone\": \"08012345678\",\r
+
+    \  \"address\": \"Lagos\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: ""
 order: 1784113543068
